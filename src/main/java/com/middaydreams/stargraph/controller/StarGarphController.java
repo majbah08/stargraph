@@ -132,8 +132,11 @@ public class StarGarphController {
         score.setLevel(level);
         score.setXp(xp);
         score.setScore(scores);
+        if(ls==null ) {
+            return levelScoreRepository.save(score);
+        }else return levelScoreRepository.update(scores,xp,mode,category,level);
 
-        return levelScoreRepository.save(score) ;
+
     }
 
 

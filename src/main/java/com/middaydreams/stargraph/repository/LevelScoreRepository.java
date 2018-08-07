@@ -18,4 +18,6 @@ public interface LevelScoreRepository extends JpaRepository<LevelScore, Long> {
     int findHighestLevel(@Param("user_id") Users user_id, @Param("mode") String mode, @Param("catagory")String catagory);
 
    // LevelScore findFirstByLevelAndUseridAndModeAndCatagoryOrderByLevelDesc(Users userid, String mode, String category);
+   @Query("update LevelScore u set u.score = :score ,u.xp=:xp where u.mode = :mode and u.catagory= :category and u.level=:level")
+    LevelScore update(int score,int xp,String mode,String category,int level);
 }
