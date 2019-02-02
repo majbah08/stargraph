@@ -1,5 +1,5 @@
 
-Build Restful CRUD API for a simple API application using Spring Boot, Mysql, JPA and Hibernate for An  game called Stragraph
+ Restful  API  using Spring Boot, Mysql, JPA and Hibernate for An  game called Stragraph
 
 ## Requirements
 
